@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <title>Quiz Extractor</title>
+    <style>
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #1e1e1e;
+          --text: #eee;
+        }
+        select,
+        button {
+          background: #2b2b2b;
+          color: #fff;
+          border-color: #444;
+        }
+      }
+
+      :root {
+        --primary: #0078d4;
+        --primary-hover: #005fa3;
+        --bg: #f7f9fb;
+        --text: #222;
+        --radius: 10px;
+        --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      body {
+        font-family: "Segoe UI", Roboto, Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        width: 260px;
+        margin: 0;
+        padding: 16px;
+        box-sizing: border-box;
+      }
+
+      h3 {
+        text-align: center;
+        margin: 0 0 10px;
+        font-size: 18px;
+        color: var(--primary);
+        letter-spacing: 0.5px;
+      }
+
+      label {
+        font-weight: 600;
+        font-size: 14px;
+      }
+
+      select {
+        width: 100%;
+        padding: 8px;
+        border-radius: var(--radius);
+        border: 1px solid #ccc;
+        font-size: 14px;
+        margin-top: 6px;
+        box-shadow: var(--shadow);
+        background: #fff;
+        transition: border 0.2s, box-shadow 0.2s;
+      }
+
+      select:focus {
+        border-color: var(--primary);
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 120, 212, 0.3);
+      }
+
+      button {
+        width: 100%;
+        margin-top: 14px;
+        padding: 10px;
+        font-size: 15px;
+        border: none;
+        border-radius: var(--radius);
+        background: var(--primary);
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        cursor: pointer;
+        transition: background 0.25s, transform 0.1s;
+        box-shadow: var(--shadow);
+      }
+
+      button:hover {
+        background: var(--primary-hover);
+      }
+
+      button:active {
+        transform: scale(0.98);
+      }
+
+      footer {
+        text-align: center;
+        font-size: 12px;
+        margin-top: 10px;
+        color: #f37022;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>📊 Quiz Extract</h3>
+
+    <label for="excelLang">Chọn định dạng Excel:</label>
+    <select id="excelLang">
+      <option value="en">Excel (English)</option>
+      <option value="vi">Excel (Tiếng Việt)</option>
+    </select>
+
+    <button id="exportBtn">Xuất dữ liệu</button>
+
+    <footer>• v2.0.1 •</footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
