@@ -92,20 +92,15 @@ function ex_() {
               return null;
             }
 
-            // Lấy số câu đúng và tổng số câu
-            const correct = Number(_text_mark[0].trim()); // ví dụ: 17
-            const totalQuestions = Number(_text_mark[2].trim()); // ví dụ: 20 hoặc 10
+            const correct = Number(_text_mark[0].trim());
+            const totalQuestions = Number(_text_mark[2].trim());
 
-            // Tính điểm thô (thang 10)
             let rawScore = (10 * correct) / totalQuestions;
 
-            // Làm tròn đúng 1 chữ số thập phân (giống extension chính thức)
             item_sv.mark = Math.round(rawScore * 10) / 10; // 8.523 → 8.5, 7.49 → 7.5, 9.95 → 10.0
 
-            // Đảm bảo không vượt quá 10 và không âm
             item_sv.mark = Math.max(0, Math.min(10, item_sv.mark));
 
-            // Nếu muốn hiển thị luôn có 1 chữ số thập phân (8 → 8.0, 9.5 → 9.5)
             const displayMark = item_sv.mark.toFixed(1);
 
             total_quest = totalQuestions;
