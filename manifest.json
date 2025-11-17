@@ -1,8 +1,8 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Quiz Results Extractor",
   "version": "2.0.1",
-  "description": "Lấy kết quả quiz từ trang result và tải về kết quả.",
+  "description": "In ra toàn bộ bộ các quiz và làm tròn",
   "permissions": [
     "downloads",
     "scripting",
@@ -17,9 +17,6 @@
   "host_permissions": [
     "*://*/*"
   ],
-  "background": {
-    "service_worker": "background.js"
-  },
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
